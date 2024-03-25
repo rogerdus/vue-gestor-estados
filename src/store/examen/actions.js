@@ -1,3 +1,5 @@
+import * as types from './mutation-types';
+
 export const agregarRespuesta = ({ commit }, pregunta) => {
-    commit('AGREGAR_RESPUESTA',pregunta);
+    commit(types.AGREGAR_RESPUESTA,pregunta);
 }

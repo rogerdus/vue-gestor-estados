@@ -1,5 +1,8 @@
+
+import * as types from './mutation-types';
+
 const mutations = {
-    ['AGREGAR_RESPUESTA'] (state, pregunta){
+    [types.AGREGAR_RESPUESTA] (state, pregunta){
         state.listaRespuestas.push(pregunta);
     }
 }
