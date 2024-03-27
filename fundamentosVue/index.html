@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamentos Vue.js</title>
+  </head>
+  <body>
+    <h1>Fundamentos Vue</h1>
+
+    <div id="app"></div>
+
+    <div id="miApp">
+      <h1>{{ titulo }}</h1>
+      <p v-show="aparece">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam delectus
+        quisquam sapiente totam quod, nesciunt earum alias placeat eos
+        accusantium, nobis labore sed consequatur cupiditate sit quia velit
+        nostrum repellendus.
+      </p>
+      <a href="#" v-bind:title="titulo">Manten el mouse</a>
+      <p :title="titulo">señala aqui</p>
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="miApp.js"></script>
+  </body>
+</html>
