@@ -20,6 +20,17 @@
       </p>
       <a href="#" v-bind:title="titulo">Manten el mouse</a>
       <p :title="titulo">señala aqui</p>
+
+      <ul>
+        <li v-for="(fruta,index) in frutas" :key="index" >{{ fruta }}</li>
+      </ul>
+     
+
+      <ul>
+        <li v-for="ingrediente in ingredientes" :key="ingrediente.id" >{{ ingrediente.name }}</li>
+      </ul>
+     
+
     </div>
 
     <script src="vue.js"></script>
