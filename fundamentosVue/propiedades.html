@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propiedades en Vue</title>
+  </head>
+  <body style="padding-bottom: 20em;">
+    <div id="propiedadesApp">
+      <h1>Propiedades en Vue</h1>
+      <h3>Propiedades computadas</h3>
+      <h4>El monto total a pagar {{ montoPagar }}</h4>
+      <p>
+        <input type="text" v-model="precioDollar" />
+      </p>
+
+      <h3>Propiedades Observadas</h3>
+      <p>
+        <input type="text" v-model="kwarg" placeholder="buscar producto">
+        <ul>
+            <li v-for="producto in productos"> {{ producto }}</li>
+        </ul>
+      </p>
+      <h3>Diferencia entre propiedad compudada y calculada</h3>
+      <p>
+        <input type="text"
+        placeholder="nombres"
+        v-model="full_name"
+        >
+        <input type="text"
+        placeholder="direccion"
+        v-model="direccion"
+        >
+        <textarea v-model="comprobante" cols="30" rows="10"></textarea>
+      </p>
+    </div>
+    <script src="vue.js"></script>
+    <script src="propiedades.js"></script>
+  </body>
+</html>

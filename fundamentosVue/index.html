@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fundamentos Vue.js</title>
   </head>
-  <body>
+  <body style="padding-bottom: 20em">
     <h1>Fundamentos Vue</h1>
 
     <div id="app"></div>
@@ -22,15 +22,34 @@
       <p :title="titulo">señala aqui</p>
 
       <ul>
-        <li v-for="(fruta,index) in frutas" :key="index" >{{ fruta }}</li>
+        <li v-for="(fruta,index) in frutas" :key="index">{{ fruta }}</li>
       </ul>
-     
 
       <ul>
-        <li v-for="ingrediente in ingredientes" :key="ingrediente.id" >{{ ingrediente.name }}</li>
+        <li v-for="(ingrediente,index) in ingredientes" :key="ingrediente.id">
+          {{ index + 1 }} - {{ ingrediente.name }}
+        </li>
       </ul>
-     
-
+      <h2>Eventos y funciones</h2>
+      <button v-on:click="aparece = !aparece">Click aqui</button>
+      <p v-show="aparece">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolorem
+        suscipit laudantium possimus nulla fugiat nam consequuntur, praesentium
+        magnam recusandae dolorum labore? Quidem possimus itaque molestias vero
+        dignissimos unde! Necessitatibus.
+      </p>
+      <button @click="saludar()">Saludar</button>
+      <button @click="probandoParametros(23,323)">parametros</button>
+      <h1>{{ contador }}</h1>
+      <button @click="incrementarContador">Incrementar</button>
+      <p>
+        <input type="text" v-model="numero1" placeholder="ingrese numero" />
+      </p>
+      <p>
+        <input type="text" v-model="numero2" placeholder="ingrese numero" />
+      </p>
+      <button @click="sumarNumeros()">Sumar</button>
+      <h3>Resultado de suma {{ suma }}</h3>
     </div>
 
     <script src="vue.js"></script>
