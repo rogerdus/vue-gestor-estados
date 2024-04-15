@@ -36,9 +36,11 @@ createApp({
         }
     },
     watch: {
-        kwarg: function(antiguo,nuevo){
-            console.log(val);
-
+        full_name: function(nuevo){
+            this.comprobante = 'Comprobante de compra de ' +  nuevo;
+        },
+        direccion: function(nuevo){
+            this.comprobante = 'Comprobante de compra de ' +  this.full_name + ' en ' + nuevo;
         }
     },
     methods: {
